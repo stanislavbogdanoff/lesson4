@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+body {
+  padding: 30px;
+}
+
+div {
+  border: solid 1px #000;
+  padding: 10px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.tr-ol {
+  display: flex;
+  column-gap: 50px;
+}
+
+.tr-ol li {
+}
+
+.tr-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: none;
+  padding: 30px;
+  color: #000;
+  font-size: 30px;
+}
+
+.box {
+  width: 200px;
+  height: 400px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Z-INDEX */
+
+.red {
+  position: relative;
+  background-color: red;
+  z-index: 2;
+}
+
+.blue {
+  margin-left: 30px;
+  position: relative;
+  background-color: rgb(0, 0, 255);
+  margin-top: -300px;
+  margin-bottom: -300px;
+  z-index: 3;
+}
+
+.green {
+  position: relative;
+  background-color: green;
+  margin-left: 60px;
+  z-index: 1;
+}
+
+.green:hover {
+  z-index: 100;
+}
+
+#trans-container button {
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* BUTTON 1*/
+
+#trans-btn-1 {
+  color: red;
+  background-color: antiquewhite;
+  transform: translate(0, 0);
+  transition: 0.3s;
+}
+
+#trans-btn-1:hover {
+  transform: translate(-10px, -10px);
+  background-color: red;
+  color: #000;
+}
+
+/* BUTTON 2*/
+
+#trans-btn-2 {
+  color: red;
+  background-color: antiquewhite;
+  transition: color 3s;
+}
+
+#trans-btn-2:hover {
+  background-color: red;
+  color: #000;
+}
+
+/************* NEW *************/
+
+#tr-one {
+  transform: scale(120%);
+}
+
+/* CSS COMMENT */
+
+#tr-two {
+  /* position: relative;
+  top: -30px;
+  left: -100px; */
+
+  /* На экране эквивалентно */
+  transform: translate(-100px, -30px);
+}
+
+#tr-three {
+  writing-mode: vertical-rl;
+  /* Эквивалентно на экране*/
+  /* transform: rotate(90deg); */
+}
+
+#wr-container {
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+#btn {
+  position: relative;
+}
+
+#btn::before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  content: "''";
+  background-color: aqua;
+}
+
+#btn::after {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  content: "''";
+  background-color: aqua;
+}
+
+#z-index-container {
+  background-color: bisque;
+  position: relative;
+  z-index: 1;
+}
+
+.shaded_text {
+  position: relative;
+}
+
+.shaded_text::after {
+  background-color: #a8b4ff;
+  width: 100%;
+  height: 45%;
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  z-index: -1;
+}
+
+.img-container {
+  width: fit-content;
+  position: relative;
+  border: none;
+  z-index: 1;
+}
+
+#pattern-left {
+  position: absolute;
+  bottom: -5px;
+  left: -10px;
+  z-index: 1;
+}
+
+#pattern-right {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  z-index: 1;
+}
+
+#main-img {
+  position: relative;
+  z-index: 2;
+}
+
+.primary-btn {
+  position: relative;
+  font-size: 18px;
+  background-color: #000;
+  color: #fff;
+  padding: 17px 48px;
+  transform: translate(0, 0);
+  transition: 0.3s;
+  border: none;
+}
+
+.primary-btn:hover {
+  transform: translate(8px, 8px);
+}
+
+.primary-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 3px solid #000;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  transform: translate(0, 0);
+  transition: 0.3s;
+}
+
+.primary-btn:hover::after {
+  transform: translate(-5px, -5px);
+}
